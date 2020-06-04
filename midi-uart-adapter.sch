@@ -25,12 +25,12 @@ F 3 "http://www.vishay.com/docs/85622/1n914.pdf" H 6200 2050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x05 MIDI-THROUGH1
+L Connector_Generic:Conn_01x03 MIDI-THROUGH1
 U 1 1 5ED7BBD7
 P 10200 3000
 F 0 "MIDI-THROUGH1" H 10280 3042 50  0000 L CNN
 F 1 "Conn_01x05" H 10280 2951 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10200 3000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10200 3000 50  0001 C CNN
 F 3 "~" H 10200 3000 50  0001 C CNN
 	1    10200 3000
 	1    0    0    -1  
@@ -156,23 +156,19 @@ F 3 "~" H 6700 4300 50  0001 C CNN
 	1    6700 4300
 	0    1    1    0   
 $EndComp
-NoConn ~ 9900 1300
 $Comp
-L Connector_Generic:Conn_01x05 MIDI-IN1
+L Connector_Generic:Conn_01x03 MIDI-IN1
 U 1 1 5ED7A90D
 P 10200 1300
 F 0 "MIDI-IN1" H 10280 1342 50  0000 L CNN
 F 1 "Conn_01x05" H 10280 1251 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10200 1300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10200 1300 50  0001 C CNN
 F 3 "~" H 10200 1300 50  0001 C CNN
 	1    10200 1300
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9900 1100
 Wire Wire Line
 	10000 1200 9450 1200
-Wire Wire Line
-	10000 1400 9400 1400
 $Comp
 L Isolator:6N138 U1
 U 1 1 5ED711DD
@@ -185,13 +181,7 @@ F 3 "http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf" H 5690 1750 50  0001 C
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	10000 1500 9550 1500
-Wire Wire Line
-	9400 1400 9400 1800
-Wire Wire Line
 	9400 1800 7550 1800
-Wire Wire Line
-	9550 1500 9550 2350
 Wire Wire Line
 	9550 2350 7550 2350
 Wire Wire Line
@@ -232,23 +222,10 @@ $EndComp
 Wire Wire Line
 	5100 2250 5100 2400
 NoConn ~ 5000 1950
-NoConn ~ 9900 2800
-NoConn ~ 9900 3000
 Wire Wire Line
 	8700 1200 8700 1300
 Wire Wire Line
 	8950 1200 8700 1200
-$Comp
-L pspice:C C1
-U 1 1 5ED88990
-P 9200 1200
-F 0 "C1" V 8885 1200 50  0000 C CNN
-F 1 "1 microF" V 8976 1200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9200 1200 50  0001 C CNN
-F 3 "~" H 9200 1200 50  0001 C CNN
-	1    9200 1200
-	0    1    1    0   
-$EndComp
 $Comp
 L power:GNDREF #PWR0102
 U 1 1 5ED8D5D8
@@ -260,40 +237,21 @@ F 3 "" H 8700 1300 50  0001 C CNN
 	1    8700 1300
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GNDREF #PWR0103
-U 1 1 5EDC1D18
-P 9450 2800
-F 0 "#PWR0103" H 9450 2550 50  0001 C CNN
-F 1 "GNDREF" H 9455 2627 50  0000 C CNN
-F 2 "" H 9450 2800 50  0001 C CNN
-F 3 "" H 9450 2800 50  0001 C CNN
-	1    9450 2800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10000 3100 9400 3100
-Wire Wire Line
-	9400 3100 9400 3750
 Wire Wire Line
 	9400 3750 7600 3750
 Wire Wire Line
 	7600 4300 9550 4300
 Wire Wire Line
-	9550 4300 9550 3200
-Wire Wire Line
-	9550 3200 10000 3200
-Wire Wire Line
 	7300 3750 6850 3750
 Wire Wire Line
 	6850 4300 7300 4300
 $Comp
-L Connector_Generic:Conn_01x05 MIDI-OUT1
+L Connector_Generic:Conn_01x03 MIDI-OUT1
 U 1 1 5ED7D422
 P 10200 5000
 F 0 "MIDI-OUT1" H 10280 5042 50  0000 L CNN
 F 1 "Conn_01x05" H 10280 4951 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10200 5000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10200 5000 50  0001 C CNN
 F 3 "~" H 10200 5000 50  0001 C CNN
 	1    10200 5000
 	1    0    0    -1  
@@ -301,26 +259,16 @@ $EndComp
 $Comp
 L power:GNDREF #PWR0104
 U 1 1 5EDD7723
-P 9450 4850
-F 0 "#PWR0104" H 9450 4600 50  0001 C CNN
-F 1 "GNDREF" H 9455 4677 50  0000 C CNN
-F 2 "" H 9450 4850 50  0001 C CNN
-F 3 "" H 9450 4850 50  0001 C CNN
-	1    9450 4850
+P 8800 4900
+F 0 "#PWR0104" H 8800 4650 50  0001 C CNN
+F 1 "GNDREF" H 8805 4727 50  0000 C CNN
+F 2 "" H 8800 4900 50  0001 C CNN
+F 3 "" H 8800 4900 50  0001 C CNN
+	1    8800 4900
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9900 4800
-NoConn ~ 9900 5000
 Wire Wire Line
 	7650 5500 9350 5500
-Wire Wire Line
-	9350 5500 9350 5100
-Wire Wire Line
-	9350 5100 10000 5100
-Wire Wire Line
-	10000 5200 9550 5200
-Wire Wire Line
-	9550 5200 9550 6100
 Wire Wire Line
 	9550 6100 7650 6100
 Wire Wire Line
@@ -363,10 +311,10 @@ VCC_tx
 Wire Wire Line
 	6250 5500 6600 5500
 $Comp
-L Connector_Generic:Conn_01x05 HEADER1
+L Connector_Generic:Conn_01x05 H1
 U 1 1 5ED7C725
 P 1150 1950
-F 0 "HEADER1" H 1068 2367 50  0000 C CNN
+F 0 "H1" H 1068 2367 50  0000 C CNN
 F 1 "Conn_01x05" H 1068 2276 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1150 1950 50  0001 C CNN
 F 3 "~" H 1150 1950 50  0001 C CNN
@@ -376,22 +324,18 @@ $EndComp
 $Comp
 L power:GNDREF #PWR0105
 U 1 1 5EDD08C0
-P 1350 2300
-F 0 "#PWR0105" H 1350 2050 50  0001 C CNN
-F 1 "GNDREF" H 1355 2127 50  0000 C CNN
-F 2 "" H 1350 2300 50  0001 C CNN
-F 3 "" H 1350 2300 50  0001 C CNN
-	1    1350 2300
+P 2050 1950
+F 0 "#PWR0105" H 2050 1700 50  0001 C CNN
+F 1 "GNDREF" H 2055 1777 50  0000 C CNN
+F 2 "" H 2050 1950 50  0001 C CNN
+F 3 "" H 2050 1950 50  0001 C CNN
+	1    2050 1950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1350 2300 1350 2150
-Text GLabel 1500 1950 2    50   Input ~ 0
-UART_rx
 Text GLabel 1500 2050 2    50   Input ~ 0
+UART_rx
+Text GLabel 1500 2150 2    50   Input ~ 0
 UART_tx
-Wire Wire Line
-	1500 1950 1350 1950
 Wire Wire Line
 	1350 2050 1500 2050
 Text GLabel 6300 6100 0    50   Input ~ 0
@@ -427,16 +371,58 @@ Wire Wire Line
 	4150 2150 4150 4300
 Wire Wire Line
 	4150 4300 6550 4300
+$Comp
+L pspice:C C1
+U 1 1 5ED88990
+P 9200 1200
+F 0 "C1" V 8885 1200 50  0000 C CNN
+F 1 "1 microF" V 8976 1200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9200 1200 50  0001 C CNN
+F 3 "~" H 9200 1200 50  0001 C CNN
+	1    9200 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 5EDC1D18
+P 8750 2900
+F 0 "#PWR0103" H 8750 2650 50  0001 C CNN
+F 1 "GNDREF" H 8755 2727 50  0000 C CNN
+F 2 "" H 8750 2900 50  0001 C CNN
+F 3 "" H 8750 2900 50  0001 C CNN
+	1    8750 2900
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	10000 4900 9650 4900
+	8750 2900 10000 2900
 Wire Wire Line
-	9650 4900 9650 4850
+	8800 4900 10000 4900
 Wire Wire Line
-	9650 4850 9450 4850
+	10000 1300 9400 1300
 Wire Wire Line
-	10000 2900 9700 2900
+	9400 1300 9400 1800
 Wire Wire Line
-	9700 2900 9700 2800
+	10000 1400 9550 1400
 Wire Wire Line
-	9700 2800 9450 2800
+	9550 1400 9550 2350
+Wire Wire Line
+	10000 5000 9350 5000
+Wire Wire Line
+	9350 5000 9350 5500
+Wire Wire Line
+	10000 5100 9550 5100
+Wire Wire Line
+	9550 5100 9550 6100
+Wire Wire Line
+	1350 1950 2050 1950
+Wire Wire Line
+	1500 2150 1350 2150
+Wire Wire Line
+	10000 3000 9400 3000
+Wire Wire Line
+	9400 3000 9400 3750
+Wire Wire Line
+	10000 3100 9550 3100
+Wire Wire Line
+	9550 3100 9550 4300
 $EndSCHEMATC

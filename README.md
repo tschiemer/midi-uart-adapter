@@ -24,6 +24,12 @@ https://github.com/tschiemer/midi-uart-adapter
 
 The optional parts (ferrite beads and capacitor) are intended to surpress EMI etc.
 
+## Changelog
+
+v2.0
+- Removed unnecessary header pins
+- More compact / smaller board size
+
 
 ## References
 
