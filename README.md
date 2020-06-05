@@ -24,6 +24,30 @@ https://github.com/tschiemer/midi-uart-adapter
 
 The optional parts (ferrite beads and capacitor) are intended to surpress EMI etc.
 
+## Connections
+
+### H1 (Header 1)
+
+| Pin | Description |
+|---|---|
+| Vrx | Receiver voltage (standard: +5V) |
+| Vtx | Transmitter voltage (standard: +5V) |
+| G | Ground |
+| Rx | UART RX|
+| Tx | UART TX|
+
+*Note* if you are using different voltages than 5V (ie 3.3V) you need other resistor values. Also see electrical specs for suggestion.
+
+### Midi-In/-Through/-Out
+
+| DIN-5pole 180deg Pin* | TRS Connector |
+|---|---|
+| 2 | T |
+| 4 | R |
+| 5 | S |
+
+* Pins 1 and 3 are not connected.
+
 ## Changelog
 
 v2.1
