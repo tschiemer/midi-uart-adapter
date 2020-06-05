@@ -33,8 +33,10 @@ The optional parts (ferrite beads and capacitor) are intended to surpress EMI et
 | Vrx | Receiver voltage (standard: +5V) |
 | Vtx | Transmitter voltage (standard: +5V) |
 | G | Ground |
-| Rx | UART RX|
-| Tx | UART TX|
+| Rx | UART RX* |
+| Tx | UART TX* |
+
+*According to standard: 31.25 (+/- 1%) Kbaud, asynchronous, with a start bit, 8 data bits (D0 to D7), and a stop bit 
 
 *Note* if you are using different voltages than 5V (ie 3.3V) you need other resistor values. Also see electrical specs for suggestion.
 
@@ -46,7 +48,7 @@ The optional parts (ferrite beads and capacitor) are intended to surpress EMI et
 | 4 | R |
 | 5 | S |
 
-* Pins 1 and 3 are not connected.
+*Pins 1 and 3 are not connected.
 
 ## Changelog
 
