@@ -2,15 +2,13 @@
 
 PCB layout for a simple MIDI (In-Through-Out) / UART - Adapter according to MIDI 1.0 Specification
 
-*** NOT YET TESTED ***
-
 Does not directly include footprints for MIDI or TRS plugs but rather provides headers such as to more easily allow customization.
 
 Also allows to use different voltage levels for RX, TX respectively (please use different resistors according to recommendations).
 
 https://github.com/tschiemer/midi-uart-adapter
 
-***Please note, this is my first PCB design ever which at this very moment has not been tested yet - hopefully soon to come.***
+According to simple table-top tests using a Behringer BCF2000 all three connections (in, through, out) work as expected.
 
 ![PCB](https://github.com/tschiemer/midi-uart-adapter/blob/master/README-PCB.png?raw=true)
 
@@ -20,7 +18,8 @@ https://github.com/tschiemer/midi-uart-adapter
 - [ONSEMI 1N914](https://www.onsemi.com/pub/Collateral/1N914-D.PDF) Laser Diode
 - Resistors (RA, RB, RC, RD, RE, RF) when Vrx = Vtx = 5V: 220 Ohm 5% 0.25W, Package 1206 (3216 Metric) (ex. [ Bourns Inc. CR1206-FX-2200ELF](https://www.bourns.com/docs/product-datasheets/CRxxxxx.pdf) )
 - *Optional* Ferrite Beads (FB1-6), 1kOhm @ 1MHz, Package 0603 (1608 Metric) (ex. [TDK Corporation MMZ1608Y102BTA00](https://product.tdk.com/en/search/emc/emc/beads/info/print_pdf)), bridge if not used
-- *Optional* Capacitor (C1), 0.1UF, Package 0201 (0603 Metric) (ex. [Murata Electronics GRM033C80J104KE15D](https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033C80J104KE15-01A.pdf)), leave unconnected if not used
+- *Optional* ~~Capacitor (C1), 0.1UF, Package 0201 (0603 Metric) (ex. [Murata Electronics GRM033C80J104KE15D](https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033C80J104KE15-01A.pdf)), leave unconnected if not used (works, but too *tiny* package size to solder by hand; well, it's possible ;) )~~
+- *Optional* Capacitor (C1), 0.1UF, Package 0603 (1608 Metric) (ex. [KEMET C0603C104K4RACTU](https://www.digikey.com/product-detail/en/kemet/C0603C104K4RACTU/399-1096-1-ND/411371)), leave unconnected if not used
 
 The optional parts (ferrite beads and capacitor) are intended to surpress EMI etc.
 
@@ -36,7 +35,7 @@ The optional parts (ferrite beads and capacitor) are intended to surpress EMI et
 | Rx | UART RX* |
 | Tx | UART TX* |
 
-*According to standard: 31.25 (+/- 1%) Kbaud, asynchronous, with a start bit, 8 data bits (D0 to D7), and a stop bit 
+*According to standard: 31.25 (+/- 1%) Kbaud, asynchronous, with a start bit, 8 data bits (D0 to D7), and a stop bit
 
 *Note* if you are using different voltages than 5V (ie 3.3V) you need other resistor values. Also see electrical specs for suggestion.
 
@@ -49,6 +48,7 @@ The optional parts (ferrite beads and capacitor) are intended to surpress EMI et
 | 5 | S |
 
 *Pins 1 and 3 are not connected.
+
 
 ## Changelog
 
